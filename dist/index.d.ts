@@ -9,8 +9,8 @@ declare const _default: {
     reportCommand(command: import("./types").ReportOptions): Promise<void>;
     readVueFiles(src: string): import("./types").SimpleFile[];
     parseVueFiles(vueFilesPath: string): import("./types").I18NItem[];
-    writeMissingToLanguage(resolvedLanguageFiles: string, missingKeys: import("./types").I18NItem[]): void;
     parseLanguageFiles(languageFilesPath: string): import("./types").I18NLanguage;
+    LanguageFileUpdater: typeof report.LanguageFileUpdater;
     extractI18NReport(parsedVueFiles: import("./types").I18NItem[], parsedLanguageFiles: import("./types").I18NLanguage, reportType?: report.VueI18NExtractReportTypes): import("./types").I18NReport;
     writeReportToFile(report: import("./types").I18NReport, writePath: string): Promise<void | NodeJS.ErrnoException>;
     VueI18NExtractReportTypes: typeof report.VueI18NExtractReportTypes;
